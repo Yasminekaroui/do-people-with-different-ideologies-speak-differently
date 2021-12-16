@@ -18,6 +18,40 @@ Using the example of climate change, this data story aims to provide evidence th
 ## US Politcians talking about climate change <a name="climatechangeinuspolitics"></a>
 
 ## Quote Similarities <a name="quotesimilarities"></a>
+{: style="text-align: justify" }
+The quotes' smilarities have been analysed on tree different levels. First on the quotation's basis, then on speaker's level and finally on parties'level.
+For the similarity analysis, [BERT](https://arxiv.org/abs/1908.10084), which is the state-of-the-art framework for sentence, text and image embeddings, has been used.
+It can compute sentence / text embeddings for more than 100 languages. These embeddings can are then compared with cosine-similarity to find sentences with a similar meaning.
+
+1- **Party Level:** In our scenario we are interest at the following metrics:
+- The similarity within parties
+- The similarity between parties
+For this aim, we perform bootstrapping in order to get the 99% confidence intervalls of the results.
+The following figure visualizes the similarity both within and between the two most important parties in the US. 
+
+<br />
+
+![similarity within and between parties](/assets/img/similarity_between_within.png){:class="displayed"}
+<br /> 
+<br /> 
+<br /> 
+The filgure shows that:
+- The similarity within the party is greater for democrats than for republicans. 
+- The inter-party similarity between republicans and democrats is greater than the similarity within republicans.
+- The inter-party similarity between republicans and democrats is less than the similarity within democrats.
+
+
+2- **Speaker Level:**
+
+One of the most important questions we want to answer in this study is: **Which are the most similar speakers within and between parties**
+The figure below shows the top 3 most similar speakers within and between the democratic and republic parties.
+<br />
+
+![similarity within and between parties](/assets/img/top_3_similarities.png){:class="displayed"}
+<br /> 
+<br /> 
+<br /> 
+One can notice that the same three politicians that are the most similar to their own party which is the democratic party are also the most similr to the opposite party.
 
 ## Topic Detection <a name="topicdetection"></a>
 
